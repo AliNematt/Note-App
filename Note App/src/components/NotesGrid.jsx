@@ -9,7 +9,8 @@ export function NotesGrid({Notes, onDelete}) {
                       id={item.id}
                       title={item.title}
                       text={item.text}
-                      date={item.submitDate} 
+                      date={item.submitDate}
+                      backGround={item.backGround} 
                       onDelete={onDelete}
                     />
                   ))}

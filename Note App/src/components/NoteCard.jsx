@@ -1,8 +1,8 @@
 import {formatNoteDate} from "./formatNoteDate"
 
-export function NoteCard({id, title, text, date, onDelete}) {
+export function NoteCard({id, title, text, date, backGround, onDelete}) {
     return (
-        <div className="note-card" id={id}>
+        <div className="note-card" id={id} style={{ backgroundColor: backGround}}>
             <h3 className="note-title">{title}</h3>
             <p className="note-content">{text}</p>
             <div className="note-footer">

@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 export function NoteCreate({onAddNote}) {
-    const [note, setNote] = useState({ title: "", text: "" });
+    const [note, setNote] = useState({ title: "", text: "", backGround: "" });
 
     const handleKeyDown = (e) => {
             if (e.key === 'Enter' && !e.shiftKey) {
@@ -46,7 +46,17 @@ export function NoteCreate({onAddNote}) {
                     <div className="note-toolbar">
                         <div className="toolbar-tools">
                             <button className="icon-btn" title="Add Image"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg></button>
-                            <button className="icon-btn" title="Background Color"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg></button>
+                            <label className="icon-btn color-picker-wrapper" title="Background Color">
+                                <input type="color" className="hidden-color-input" value={note.backGround}
+                                    onChange={(e) => setNote(prev => ({ ...prev, backGround: e.target.value }))}
+                                    onKeyDown={handleKeyDown}
+                                />
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+                                    <path d="M2 12h20"></path>
+                                </svg>
+                            </label>
                         </div>
                         <button className="btn-close">Close</button>
                     </div>
