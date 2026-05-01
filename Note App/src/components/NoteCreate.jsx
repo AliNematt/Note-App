@@ -16,7 +16,6 @@ export function NoteCreate({onAddNote}) {
                 };
 
                 onAddNote(newNote);
-
                 setNote({ title: "", text: "" });
             }
         };

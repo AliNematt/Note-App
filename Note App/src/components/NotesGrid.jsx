@@ -1,6 +1,6 @@
 import { NoteCard } from "./NoteCard"
 
-export function NotesGrid({Notes}) {
+export function NotesGrid({Notes, onDelete}) {
     return (
         <section className="notes-grid">     
             {Notes.map(item => (
@@ -10,6 +10,7 @@ export function NotesGrid({Notes}) {
                       title={item.title}
                       text={item.text}
                       date={item.submitDate} 
+                      onDelete={onDelete}
                     />
                   ))}
         </section>
