@@ -1,9 +1,17 @@
 import { NoteCard } from "./NoteCard"
 
-export function NotesGrid() {
+export function NotesGrid({Notes}) {
     return (
         <section className="notes-grid">     
-            <NoteCard/>
+            {Notes.map(item => (
+                    <NoteCard
+                      key={item.id}
+                      id={item.id}
+                      title={item.title}
+                      text={item.text}
+                      date={item.submitDate} 
+                    />
+                  ))}
         </section>
     )
 }

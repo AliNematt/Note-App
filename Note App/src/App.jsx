@@ -4,13 +4,17 @@ import { NoteCreate } from './components/NoteCreate'
 import { NotesGrid } from './components/NotesGrid'
 
 function App() {
+  const [notes, setNote] = useState([])
 
+  function addNote(newNote) {
+    setNote(prev => [...prev, newNote])
+  }
   return (
     <>
       <Header />
       <main>
-        <NoteCreate/>
-        <NotesGrid/>
+        <NoteCreate onAddNote={addNote}/>
+        <NotesGrid Notes={notes}/>
       </main>
     </>
   )
