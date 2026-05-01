@@ -1,191 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notes</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minimal Note App</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <!-- Header -->
-        <header class="header">
-            <div class="header-left">
-                <h1 class="logo">Notes</h1>
-                <span class="subtitle">Keep your thoughts organized</span>
-            </div>
-            <div class="header-right">
-                <button class="icon-btn">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                        <circle cx="11" cy="11" r="8"/>
-                        <path d="m21 21-4.35-4.35"/>
-                    </svg>
-                </button>
-                <button class="icon-btn">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                        <circle cx="12" cy="12" r="1"/>
-                        <circle cx="12" cy="5" r="1"/>
-                        <circle cx="12" cy="19" r="1"/>
-                    </svg>
-                </button>
-            </div>
-        </header>
 
-        <!-- Create Note -->
-        <section class="create-section">
-            <input type="text" class="note-input" placeholder="Take a note...">
-        </section>
-
-        <!-- Notes Grid -->
-        <div class="notes-grid">
-            <!-- Note 1 -->
-            <article class="note">
-                <h3 class="note-title">Weekly Goals</h3>
-                <p class="note-content">Complete project documentation, review pull requests, schedule team meeting for Q2 planning</p>
-                <div class="note-footer">
-                    <span class="note-time">2 hours ago</span>
-                    <div class="note-actions">
-                        <button class="action-btn">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
-                                <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
-                            </svg>
-                        </button>
-                        <button class="action-btn">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                <polyline points="3 6 5 6 21 6"/>
-                                <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Note 2 -->
-            <article class="note">
-                <h3 class="note-title">Reading List</h3>
-                <p class="note-content">Atomic Habits, The Design of Everyday Things, Thinking Fast and Slow</p>
-                <div class="note-footer">
-                    <span class="note-time">5 hours ago</span>
-                    <div class="note-actions">
-                        <button class="action-btn">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
-                                <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
-                            </svg>
-                        </button>
-                        <button class="action-btn">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                <polyline points="3 6 5 6 21 6"/>
-                                <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Note 3 -->
-            <article class="note">
-                <h3 class="note-title">Project Ideas</h3>
-                <p class="note-content">Build a minimalist note-taking app, create a personal portfolio website, learn Three.js for 3D web experiences</p>
-                <div class="note-footer">
-                    <span class="note-time">Yesterday</span>
-                    <div class="note-actions">
-                        <button class="action-btn">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
-                                <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
-                            </svg>
-                        </button>
-                        <button class="action-btn">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                <polyline points="3 6 5 6 21 6"/>
-                                <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Note 4 -->
-            <article class="note">
-                <h3 class="note-title">Meeting Notes</h3>
-                <p class="note-content">Discussed new feature roadmap, assigned tasks for sprint, next sync on Friday at 2 PM</p>
-                <div class="note-footer">
-                    <span class="note-time">2 days ago</span>
-                    <div class="note-actions">
-                        <button class="action-btn">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
-                                <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
-                            </svg>
-                        </button>
-                        <button class="action-btn">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                <polyline points="3 6 5 6 21 6"/>
-                                <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Note 5 -->
-            <article class="note">
-                <h3 class="note-title">Travel Plans</h3>
-                <p class="note-content">Tokyo - April, Barcelona - June, Iceland - September. Book flights early for better deals</p>
-                <div class="note-footer">
-                    <span class="note-time">3 days ago</span>
-                    <div class="note-actions">
-                        <button class="action-btn">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
-                                <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
-                            </svg>
-                        </button>
-                        <button class="action-btn">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                <polyline points="3 6 5 6 21 6"/>
-                                <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Note 6 -->
-            <article class="note">
-                <h3 class="note-title">Recipe: Pasta Carbonara</h3>
-                <p class="note-content">Spaghetti, eggs, pecorino cheese, guanciale, black pepper. Cook pasta al dente, mix with egg mixture off heat</p>
-                <div class="note-footer">
-                    <span class="note-time">1 week ago</span>
-                    <div class="note-actions">
-                        <button class="action-btn">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
-                                <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
-                            </svg>
-                        </button>
-                        <button class="action-btn">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                <polyline points="3 6 5 6 21 6"/>
-                                <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-            </article>
-        </div>
-
-        <!-- Empty State (Hidden) -->
-        <div class="empty-state" style="display: none;">
-            <svg class="empty-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-                <polyline points="14 2 14 8 20 8"/>
-            </svg>
-            <h3>No notes yet</h3>
-            <p>Click above to create your first note</p>
-        </div>
+  <header class="app-header">
+    <div class="logo">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+      <span>Notes</span>
     </div>
+    
+    <div class="search-bar">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9ca3af" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+      <input type="text" placeholder="Search your notes...">
+    </div>
+  </header>
+
+  <main>
+    <section class="create-note-container">
+        <div class="create-note-box">
+            
+            <!-- Title: Hidden by default, shows on focus -->
+            <div class="collapsible-section">
+            <input type="text" class="note-title-input" placeholder="Title">
+            </div>
+
+            <!-- Main Input -->
+            <div class="input-wrapper">
+            <textarea class="note-body-input" placeholder="Take a note..." rows="1"></textarea>
+            <!-- Icons visible only when closed -->
+            <div class="idle-icons">
+                <button class="icon-btn" title="New list"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg></button>
+            </div>
+            </div>
+
+            <!-- Toolbar: Hidden by default, shows on focus -->
+            <div class="collapsible-section">
+            <div class="note-toolbar">
+                <div class="toolbar-tools">
+                <button class="icon-btn" title="Add Image"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg></button>
+                <button class="icon-btn" title="Background Color"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg></button>
+                </div>
+                <button class="btn-close">Close</button>
+            </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="notes-grid">
+      
+      <!-- Note Card 1 -->
+      <div class="note-card">
+        <h3 class="note-title">React Project Ideas</h3>
+        <p class="note-content">1. Minimalist Note App<br>2. Weather Dashboard<br>3. Expense Tracker with Charts</p>
+        <div class="note-footer">
+          <span class="note-date">May 1, 2026</span>
+          <div class="note-tools">
+            <button class="tool-btn" title="Edit">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+            </button>
+            <button class="tool-btn delete" title="Delete">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Note Card 2 -->
+      <div class="note-card">
+        <h3 class="note-title">Grocery List</h3>
+        <p class="note-content">- Almond milk<br>- Avocados<br>- Whole wheat bread<br>- Coffee beans</p>
+        <div class="note-footer">
+          <span class="note-date">Apr 28, 2026</span>
+          <div class="note-tools">
+            <button class="tool-btn" title="Edit"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg></button>
+            <button class="tool-btn delete" title="Delete"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Note Card 3 -->
+      <div class="note-card">
+        <h3 class="note-title">Meeting Notes: UI Redesign</h3>
+        <p class="note-content">Discussed moving towards a more minimalist approach. More white space, softer shadows, and sans-serif fonts. Need to update the Figma file by Thursday.</p>
+        <div class="note-footer">
+          <span class="note-date">Apr 25, 2026</span>
+          <div class="note-tools">
+            <button class="tool-btn" title="Edit"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg></button>
+            <button class="tool-btn delete" title="Delete"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg></button>
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
 </body>
 </html>
