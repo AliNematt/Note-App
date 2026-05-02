@@ -21,12 +21,19 @@ function App() {
     setNote(prev => prev.filter(n => n.id !== id))
   }
 
+  function editNote(id, title, text) {
+    setTasks(prev => prev.map(
+      t => t.id === id 
+      ? { ...t, title: title ,text:  text}
+      : t
+    ))
+  }
   return (
     <>
       <Header />
       <main>
         <NoteCreate onAddNote={addNote}/>
-        <NotesGrid Notes={notes} onDelete={removeNote}/>
+        <NotesGrid Notes={notes} onDelete={removeNote} onEdit={editNote}/>
       </main>
     </>
   )
