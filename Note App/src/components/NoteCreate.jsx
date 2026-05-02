@@ -58,7 +58,9 @@ export function NoteCreate({onAddNote}) {
                                 </svg>
                             </label>
                         </div>
-                        <button className="btn-close">Close</button>
+                        <div className="right-actions" style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                        <span style={{ fontSize: '12px', color: '#888' }}>Press Enter to save</span>
+                        <button className="btn-close">Close</button></div>
                     </div>
                 </div>
 
