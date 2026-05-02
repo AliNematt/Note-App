@@ -21,7 +21,6 @@
 
 ## 📸 اسکرین‌شات‌ها
 
-*(لینک تصاویر خود را در اینجا جایگزین کنید)*
 
 ### حالت روشن (Light Mode)
 ![Light Version](screenshots/Screenshot-light.png)
