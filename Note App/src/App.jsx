@@ -9,6 +9,8 @@ function App() {
     return stored ? JSON.parse(stored) : []
   })
 
+  const [searchText, setSearchText] = useState("")
+
   useEffect(() => {
     localStorage.setItem("notes", JSON.stringify(notes))
   }, [notes])
@@ -22,18 +24,27 @@ function App() {
   }
 
   function editNote(id, title, text) {
-    setTasks(prev => prev.map(
+    setNote(prev => prev.map(
       t => t.id === id 
       ? { ...t, title: title ,text:  text}
       : t
     ))
   }
+
+  const filteredNotes = notes.filter(note => {
+    const lowerSearch = searchText.toLowerCase();
+    return (
+      note.title.toLowerCase().includes(lowerSearch) || 
+      note.text.toLowerCase().includes(lowerSearch)
+    );
+  })
+
   return (
     <>
-      <Header />
+      <Header onSearch={setSearchText} />
       <main>
         <NoteCreate onAddNote={addNote}/>
-        <NotesGrid Notes={notes} onDelete={removeNote} onEdit={editNote}/>
+        <NotesGrid Notes={filteredNotes} onDelete={removeNote} onEdit={editNote}/>
       </main>
     </>
   )

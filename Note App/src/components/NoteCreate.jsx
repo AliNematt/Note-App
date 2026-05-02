@@ -47,7 +47,7 @@ export function NoteCreate({onAddNote}) {
                         <div className="toolbar-tools">
                             <button className="icon-btn" title="Add Image"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg></button>
                             <label className="icon-btn color-picker-wrapper" title="Background Color">
-                                <input type="color" className="hidden-color-input" value={note.backGround}
+                                <input type="color" className="hidden-color-input" value={note.backGround || "#ffffff"}
                                     onChange={(e) => setNote(prev => ({ ...prev, backGround: e.target.value }))}
                                     onKeyDown={handleKeyDown}
                                 />

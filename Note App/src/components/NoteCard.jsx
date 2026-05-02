@@ -30,11 +30,13 @@ export function NoteCard({id, title, text, date, backGround, onDelete, onEdit}) 
                 <input
                     type="text"
                     className="note-edit-title"
+                    name="note-title"
                     value={editedTitle}
                     onChange={(e) => setEditedTitle(e.target.value)}
                     placeholder="Title"
                 />
                 <textarea
+                    name="note-text"
                     className="note-edit-content"
                     value={editedText}
                     onChange={(e) => setEditedText(e.target.value)}

@@ -440,7 +440,7 @@ main {
     outline: none;
     background-color: transparent;
     font-family: 'Inter', sans-serif;
-    color: #202124;
+    color: var(--text-primary);
     padding: 8px;
     border-radius: 8px;
     box-sizing: border-box;
@@ -456,6 +456,7 @@ main {
 .note-edit-content:focus {
     background-color: #ffffff;
     box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1); 
+    color: var(--text-secondary);
 }
 
 .note-edit-title {
